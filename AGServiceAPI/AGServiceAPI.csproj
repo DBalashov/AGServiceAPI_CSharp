@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E2B4143F-00FE-4B20-9400-6918BD51738B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AGServiceAPI</RootNamespace>
+    <AssemblyName>AGServiceAPI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\AGServiceAPI.Core\AGServiceBase.cs">
+      <Link>AGServiceBase.cs</Link>
+    </Compile>
+    <Compile Include="..\AGServiceAPI.Core\AGServiceClientAsync.cs">
+      <Link>AGServiceClientAsync.cs</Link>
+    </Compile>
+    <Compile Include="..\AGServiceAPI.Core\Extenders.cs">
+      <Link>Extenders.cs</Link>
+    </Compile>
+    <Compile Include="..\AGServiceAPI.Core\Models\Common.cs">
+      <Link>Models\Common.cs</Link>
+    </Compile>
+    <Compile Include="..\AGServiceAPI.Core\Models\RDeviceInfo.cs">
+      <Link>Models\RDeviceInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\AGServiceAPI.Core\Models\RDevices.cs">
+      <Link>Models\RDevices.cs</Link>
+    </Compile>
+    <Compile Include="..\AGServiceAPI.Core\Models\RDeviceStatus.cs">
+      <Link>Models\RDeviceStatus.cs</Link>
+    </Compile>
+    <Compile Include="..\AGServiceAPI.Core\Models\RDrivers.cs">
+      <Link>Models\RDrivers.cs</Link>
+    </Compile>
+    <Compile Include="..\AGServiceAPI.Core\Models\RGeofence.cs">
+      <Link>Models\RGeofence.cs</Link>
+    </Compile>
+    <Compile Include="..\AGServiceAPI.Core\Models\RGeofences.cs">
+      <Link>Models\RGeofences.cs</Link>
+    </Compile>
+    <Compile Include="..\AGServiceAPI.Core\Models\RImplements.cs">
+      <Link>Models\RImplements.cs</Link>
+    </Compile>
+    <Compile Include="..\AGServiceAPI.Core\Models\ROnlineInfo.cs">
+      <Link>Models\ROnlineInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\AGServiceAPI.Core\Models\RParameters.cs">
+      <Link>Models\RParameters.cs</Link>
+    </Compile>
+    <Compile Include="..\AGServiceAPI.Core\Models\RProperty.cs">
+      <Link>Models\RProperty.cs</Link>
+    </Compile>
+    <Compile Include="..\AGServiceAPI.Core\Models\RRoutes.cs">
+      <Link>Models\RRoutes.cs</Link>
+    </Compile>
+    <Compile Include="..\AGServiceAPI.Core\Models\RSchema.cs">
+      <Link>Models\RSchema.cs</Link>
+    </Compile>
+    <Compile Include="..\AGServiceAPI.Core\Models\RTrackInfo.cs">
+      <Link>Models\RTrackInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\AGServiceAPI.Core\Models\RTripItems.cs">
+      <Link>Models\RTripItems.cs</Link>
+    </Compile>
+    <Compile Include="..\AGServiceAPI.Core\Models\RTrips.cs">
+      <Link>Models\RTrips.cs</Link>
+    </Compile>
+    <Compile Include="..\AGServiceAPI.Core\Models\RTripTables.cs">
+      <Link>Models\RTripTables.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="JetBrains.Annotations, Version=11.1.0.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325">
+      <HintPath>..\packages\JetBrains.Annotations.11.1.0\lib\net20\JetBrains.Annotations.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+</Project>
